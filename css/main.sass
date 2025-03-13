@@ -33,6 +33,12 @@ h1, h2, h3, h4, h5 ,h6
 	color: $base
 p
 	color: $sec
+.main-title
+	font-size: 60px
+	font-weight: bold
+	color: $base
+
+
 //Estilos de barra de navegacion
 
 nav
@@ -43,11 +49,18 @@ nav
 	border-bottom: 1px solid transparent
 	z-index: 100
 	@extend .tSlow
+	//Animacion de la barra de navegacion
+	&:hover
+		background-color: white
+		padding: 25px 0px
+		border: 1px solid transparentize($base,.9)
+		.logo
+			img
+				width: 80%
 	.logo
 		img
 			width: 100%
 			@extend .tSlow
-
 	ul
 		margin: 0px
 		margin-top: 12px
@@ -145,6 +158,20 @@ button
 		background-color: $outline
 		border: 1px solid $outline
 
+////////////////////////////////////////////////////
+//Imagenes del sitio////////////////////////////
+///////////////////////////////////////////////////
+.rounded-circle
+	width: 250px
+	height: 250px
+	-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+	-o-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+	-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+	@extend .tSlow
+	&:hover
+		clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%)	
+	
+
 
 /////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
@@ -154,13 +181,13 @@ button
 
 #slider
 	backface-visibility: hidden
-	-webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%) 
-	-o-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%) 
+	-webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+	-o-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
 	-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)  
 
 #slippry
 	position: relative
-	h1, h2, h3, h4, h5, h6, p, a, button, small, strong, span
+	h1, h2, h3, h4, h5, h6, p, a, button
 		position: absolute
 	p
 		width: 600px

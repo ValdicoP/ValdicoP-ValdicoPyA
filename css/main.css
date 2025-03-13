@@ -1,4 +1,4 @@
-.tSlow, button, input,
+.tSlow, .rounded-circle, button, input,
 select,
 option,
 textarea, li a::after, li a::before, li a, nav ul .link-active a::after, nav ul, nav .logo img, nav, a {
@@ -30,6 +30,12 @@ p {
   color: #694947;
 }
 
+.main-title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #060a0f;
+}
+
 nav {
   width: 100%;
   background-color: transparent;
@@ -37,6 +43,14 @@ nav {
   position: fixed;
   border-bottom: 1px solid transparent;
   z-index: 100;
+}
+nav:hover {
+  background-color: white;
+  padding: 25px 0px;
+  border: 1px solid rgba(6, 10, 15, 0.1);
+}
+nav:hover .logo img {
+  width: 80%;
 }
 nav .logo img {
   width: 100%;
@@ -148,6 +162,18 @@ button:hover {
   border: 1px solid #ff6600;
 }
 
+.rounded-circle {
+  width: 250px;
+  height: 250px;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -o-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  -clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.rounded-circle:hover {
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+          clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+}
+
 #slider {
   backface-visibility: hidden;
   -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%);
@@ -158,7 +184,7 @@ button:hover {
 #slippry {
   position: relative;
 }
-#slippry h1, #slippry h2, #slippry h3, #slippry h4, #slippry h5, #slippry h6, #slippry p, #slippry a, #slippry button, #slippry small, #slippry strong, #slippry span {
+#slippry h1, #slippry h2, #slippry h3, #slippry h4, #slippry h5, #slippry h6, #slippry p, #slippry a, #slippry button {
   position: absolute;
 }
 #slippry p {
